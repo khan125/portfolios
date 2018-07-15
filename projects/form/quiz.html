@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/quiz.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1>Regular Expression Quiz</h1>
+        </header>
+        <div class="row">
+        <div class="col-2">
+                <section id="scoreboard">
+                        <div class="score">
+                            <span><b>Score : </b>
+                            <span id="score">0</span>
+                            </span>
+                        </div>
+                    </section>
+        </div>
+        <div class="col-8">
+            <div id="resultDisplay"></div>
+
+            <div style="text-align: center;" class="result">
+                    <table class="responsive-table centered" id="resultTable">
+                            <thead>
+                              <tr>
+                                  <th>Qno</th>
+                                  <th>Total-Marks</th>
+                                  <th>Obtained-Marks</th>
+                                  <th>Negative-Marks</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr></tr>
+                            </tbody>
+                          </table>
+
+            </div>
+        <div class="quiz">
+            <div class="text">
+         <p><span class="Qno"> </span><span class="re"> </span></p>
+         </div>
+         <div class="test">
+            <p>
+                <label>
+                  <input type="checkbox" id="0" class="browser-default" onclick="checkValue(0)"  value="" />
+                  <span class="check_value"></span>
+                </label>
+                <i id="check_0" class="material-icons prefix done"></i>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" id="1" class="browser-default" onclick="checkValue(1)" value="" />
+                  <span class="check_value"></span>
+                </label>
+                <i id="1" class="material-icons prefix done"></i>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" id="2" class="browser-default" onclick="checkValue(2)" value="" />
+                  <span class="check_value"></span>
+                </label>
+                <i id="2" class="material-icons prefix done"></i>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" id="3" class="browser-default" onclick="checkValue(3)" value="" />
+                  <span class="check_value"></span>
+                </label>
+                <i id="3" class="material-icons prefix done"></i>
+              </p>
+            </div>
+         <div class="next">
+                <button class="btn waves-effect waves-light disabled" id="next" data-target="modal1" class="btn modal-trigger" name="action">Next
+                        <i class="material-icons right">send</i>
+                    </button>
+         </div>
+        </div>
+        <div class="start">
+                <button class="btn waves-effect waves-light"  id="start" >Start Quiz </button>
+                <button data-target="modal1" class="btn modal-trigger" id="help">Instruction</button>
+        </div>
+        </div>
+        <div class="col-2">
+                <section id="clock">
+                        <div class="timer">
+                            <span>00:00:00</span>
+                        </div>
+                    </section>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Modal Structure -->
+
+      <div id="modal1" class="modal modal-fixed-footer">
+          <div class="modal-header">
+                <h4 style="text-align: center";>Instruction</h4>
+          </div>
+            <div class="modal-content">
+                    <p>The Quiz will be of 10 minutes, and there will be 6 Regulare expression question.Each question has four option, on each correct option you will
+                        given 5 marks and on each wrong option you will be deducted -3 marks.</p>
+                        <p>There could one or more answers to the same Regular expression, once you checked an option that will be locked.</p>
+                        <p>At least 50% is must to pass the test</p>
+                        <p class="luck"><b>Best of Luck!</b></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a> -->
+              <button class="modal-close waves-effect waves-green btn-flat ">OK</button>
+            </div>
+          </div>
+
+            <!-- Modal Structure -->
+  <!-- <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Result</h4>
+            <div class="form-content">
+                  <img src="images/sending2.gif" id="loading" alt="loader"/>
+                  
+      <table class="highlight responsive-table">
+            <thead>
+              <tr>
+                  <th>Qno</th>
+                  <th>Total-Marks</th>
+                  <th>Obtained-Marks</th>
+                  <th>Negative-Marks</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              
+            </tbody>
+          </table>
+            </div>
+            <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                </div>
+        </div>
+       
+    </div> -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>

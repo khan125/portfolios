@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/materialize.min.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container_div">
+        <div class="card">
+            <h3>Contact Information</h3>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" onblur="validateName_f()" required>
+                            <span id="firstn_error"></span>
+                            <label for="first_name">First Name</label>
+                            <i id="firstn_icon" class="material-icons prefix done">done</i>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="last_name" type="text" onblur="validateName_l()" required>
+                            <span id="lastn_error"></span>
+                            <label for="last_name">Last Name</label>
+                            <i id="lastn_icon" class="material-icons prefix done">done</i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="text" onblur="validate_email()"  required>
+                            <span id="email_error"></span>
+                            <label for="email">Email</label>
+                            <i id="email_icon" class="material-icons prefix done">done</i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="number" type="text" onblur="validate_phone()" required>
+                            <span id="phone_error"></span>
+                            <label for="number">Mobile Number</label>
+                            <i id="phone_icon" class="material-icons prefix done">done</i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">address</i>
+                            <input id="address" type="text" onblur="validate_address()" required>
+                            <span id="address_error"></span>
+                            <label for="address">Address</label>
+                            <i id="address_icon" class="material-icons prefix done">done</i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" onblur="validate_password()" required>
+                            <span id="password_error"></span>
+                            <label for="password">Password</label>
+                            <i id="password_icon" class="material-icons prefix done">done</i>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" data-target="modal1" class="btn modal-trigger" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+  <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+          <h4>Submission</h4>
+          <div class="form-content">
+                <img src="images/sending2.gif" id="loading" alt="loader"/>
+          </div>
+          <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+              </div>
+      </div>
+     
+  </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

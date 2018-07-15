@@ -1,0 +1,60 @@
+.container_div{
+    width:40%;
+    margin:0 auto;
+
+}
+form{
+    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border: 0; */
+    text-align: center;
+}
+.card{
+    margin-top:50px;
+    padding-bottom: 15px;
+}
+.card h3{
+    text-align: center;
+}
+button{
+    margin:0 auto;
+}
+.valid{
+    border-bottom:2px solid green;
+}
+.invalid{
+    border-bottom:2px solid red;
+    color:red;
+}
+.modal-content{
+    text-align: center;
+}
+.model{
+    width:50%;
+}
+
+.icon {
+    position: relative;
+    /* Adjust these values accordingly */
+    top: 5px;
+    left: 5px;
+  }
+  .done{
+      position:relative;
+      right:4px;
+      color:rgb(10, 199, 10);
+  }
+  #firstn_icon,#lastn_icon,#email_icon,#phone_icon,#address_icon,#password_icon{
+    visibility: hidden;
+  }
+  #firstn_error,#lastn_error,#email_error,#phone_error,#address_error,#password_error{
+     color:red;   
+     text-align: left;  
+  }
+
+  .text-red{
+      color: red;
+  }
+  #resultDisplay{
+      display:none;
+  }
+ 
